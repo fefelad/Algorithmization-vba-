@@ -32,7 +32,29 @@ Dim poteri As Double
 End Sub
 
 Sub ex3()
+    Dim Length As Double
+    Dim Width As Double
+    Dim Radius As Double
+    Dim Diameter As Double
+    Dim Count As Integer
+    Dim BlankArea As Double
+    Dim MaterialArea As Double
+    Dim WasteArea As Double
+    Dim PI As Double
 
+    Length = 12
+    Width = 1.4
+    Radius = 0.15
+    Diameter = Radius * 2
+    PI = 3.14
+
+    Count = Int(Length / Diameter)
+
+    BlankArea = PI * (Radius ^ 2)
+    MaterialArea = Length * Width
+    WasteArea = MaterialArea - Count * BlankArea
+    
+    MsgBox WasteArea
 End Sub
 
 Sub ex4()
