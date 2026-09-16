@@ -1,23 +1,35 @@
+## Задание 1
+
+```vb
 Option Explicit
 
 Sub ex1()
-Dim inputNumber As Double
-Dim v As Double
-Dim s As Double
+
+    Dim inputNumber As Double
+    Dim v As Double
+    Dim s As Double
 
     inputNumber = InputBox("Введите длину ребра куба: ")
     v = inputNumber ^ 3
     s = 6 * inputNumber ^ 2
+
     MsgBox "Объем куба = " & v
     MsgBox "Площадь поверхности = " & s
 
 End Sub
+```
 
+**svg**
+
+## Задание 2
+
+```vb
 Sub ex2()
-Dim syrie As Double
-Dim pryazha As Double
-Dim othody As Double
-Dim poteri As Double
+
+    Dim syrie As Double
+    Dim pryazha As Double
+    Dim othody As Double
+    Dim poteri As Double
 
     syrie = 12 * 1000
 
@@ -30,37 +42,65 @@ Dim poteri As Double
     MsgBox "Потери: " & poteri
 
 End Sub
+```
 
+**svg**
+
+## Задание 3
+
+```vb
 Sub ex3()
+
     Dim Length As Double
     Dim Width As Double
     Dim Radius As Double
     Dim Diameter As Double
-    Dim Count As Integer
+
+    Dim CountX As Long
+    Dim CountY As Long
+    Dim Count As Long
+
     Dim BlankArea As Double
     Dim MaterialArea As Double
+    Dim UsefulArea As Double
     Dim WasteArea As Double
+
     Dim PI As Double
 
     Length = 12
     Width = 1.4
     Radius = 0.15
+
     Diameter = Radius * 2
     PI = 3.14
 
-    Count = Int(Length / Diameter)
+    CountX = Int(Length / Diameter)
+    CountY = Int(Width / Diameter)
+    Count = CountX * CountY
 
     BlankArea = PI * (Radius ^ 2)
     MaterialArea = Length * Width
-    WasteArea = MaterialArea - Count * BlankArea
-    
-    MsgBox WasteArea
+    UsefulArea = Count * BlankArea
+    WasteArea = MaterialArea - UsefulArea
+
+    MsgBox "Количество заготовок: " & Count & " шт." & vbCrLf & _
+           "Общая площадь ткани: " & Round(MaterialArea, 2) & " кв.м." & vbCrLf & _
+           "Полезная площадь кругов: " & Round(UsefulArea, 2) & " кв.м." & vbCrLf & _
+           "Площадь отходов материи: " & Round(WasteArea, 2) & " кв.м.", _
+           vbInformation, "Результат"
+
 End Sub
+```
 
+**svg**
+
+## Задание 4
+
+```vb
 Sub ex4()
-Dim x1 As Double
-Dim y1 As Double
 
+    Dim x1 As Double
+    Dim y1 As Double
     Dim x2 As Double
     Dim y2 As Double
 
@@ -74,15 +114,22 @@ Dim y1 As Double
 
     distance = Sqr((x2 - x1) ^ 2 + (y2 - y1) ^ 2)
 
-    MsgBox "Ðàññòîÿíèå = " & distance
+    MsgBox "Расстояние = " & distance
 
 End Sub
+```
 
+**svg**
+
+## Задание 5
+
+```vb
 Sub ex5()
-Dim A As Double
-Dim B As Double
-Dim C As Double
-Dim summa As Double
+
+    Dim A As Double
+    Dim B As Double
+    Dim C As Double
+    Dim summa As Double
 
     A = InputBox("Введите A:")
     B = InputBox("Введите B:")
@@ -95,18 +142,24 @@ Dim summa As Double
     MsgBox "Процент C: " & C / summa * 100 & "%"
 
 End Sub
+```
 
+**svg**
+
+## Задание 6
+
+```vb
 Sub ex6()
-Dim productionPerMinute As Integer
-Dim machines As Integer
-Dim hours As Integer
-Dim minutes As Integer
-Dim total As Integer
+
+    Dim productionPerMinute As Integer
+    Dim machines As Integer
+    Dim hours As Integer
+    Dim minutes As Integer
+    Dim total As Integer
 
     productionPerMinute = 7
     machines = 3
     hours = 6
-
 
     minutes = hours * 60
     total = productionPerMinute * machines * minutes
@@ -114,3 +167,6 @@ Dim total As Integer
     MsgBox "Всего тарелок: " & total
 
 End Sub
+```
+
+**svg**
