@@ -1,3 +1,40 @@
+## ex1
+
+```vba
+Sub ex1()
+
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите x от 0 до 1")
+
+    Select Case x
+
+        Case Is < 0
+            MsgBox "x вне диапазона"
+
+        Case Is < 0.2
+            y = 1 + Log(1 + x)
+
+        Case 0.2 To 0.8
+            y = (1 + Sqr(x)) / (1 + x)
+
+        Case Is <= 1
+            y = 2 * Exp(-2 * x)
+
+        Case Else
+            MsgBox "x вне диапазона"
+            Exit Sub
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
 ## ex2
 
 ```vba
@@ -21,10 +58,11 @@ Sub ex2()
         Case 100000 To 999999
             MsgBox "Шестизначное число"
         Case 1000000 To 9999999
-            MsgBox "Семизначное число"
     End Select
 End Sub
 ```
+
+---
 
 ## ex3
 
@@ -94,6 +132,8 @@ Sub ex3()
 End Sub
 ```
 
+---
+
 ## ex4
 
 ```vba
@@ -124,5 +164,225 @@ Sub ex4()
 
     MsgBox "Номер: " & number & vbCrLf & _
            "Оператор: " & operator
+End Sub
+```
+
+---
+
+## ex12
+
+```vba
+Sub ex12()
+
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("введите x от -2 до 2")
+
+    Select Case x
+
+        Case Is < -2
+            MsgBox "x вне диапозона"
+            Exit Sub
+
+        Case -2 To -1
+            y = (1 + Abs(x)) / ((1 + x + x ^ 2) ^ (1 / 3))
+
+        Case Is < 0
+            y = 2 * Log(1 + x ^ 2) + (1 + Cos(x) ^ 4) / (2 + x)
+
+        Case 0 To 2
+            y = (1 + x) ^ (3 / 5)
+
+        Case Else
+            MsgBox "x вне диапозона"
+            Exit Sub
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
+## ex13
+
+```vba
+Sub ex13()
+
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите x от -2 до 2")
+
+    Select Case x
+
+        Case Is < -2
+            MsgBox "x вне диапазона"
+            Exit Sub
+
+        Case -2 To 0
+            y = (1 + x) / ((1 + x ^ 2) ^ (1 / 3))
+
+        Case Is < 1
+            y = -x + 2 * Exp(-2 * x)
+
+        Case 1 To 2
+            y = Abs(2 - x) ^ (1 / 3)
+
+        Case Else
+            MsgBox "x вне диапазона"
+            Exit Sub
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
+## ex14
+
+```vba
+Sub ex14()
+
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите x от -2 до 2")
+
+    Select Case x
+
+        Case Is < 0
+            y = 3 * x + Sqr(1 + x ^ 2)
+
+        Case 0 To 1
+            y = 2 * Cos(x) * Exp(-2 * x)
+
+        Case Else
+            y = 2 * Sin(3 * x)
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
+## ex15
+
+```vba
+Sub ex15()
+
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите x от -1.7 до 1.5")
+
+    Select Case x
+
+        Case Is < 0
+            y = (1 + x + x ^ 2) / (1 + x ^ 3)
+
+        Case Is < 1
+            y = Sqr(1 + (2 * x) / (1 + x ^ 2))
+
+        Case 1 To 1.5
+            y = 2 * Abs(0.5 + Sin(x))
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
+## ex16
+
+```vba
+Sub ex16()
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите значение x от -1.5 до 1.8:")
+
+    Select Case x
+
+        Case Is < 0
+            y = 1 + (3 + x) / (1 + x ^ 2)
+
+        Case Is < 1
+            y = Sqr(1 + (1 - x) ^ 2)
+
+        Case Else
+            y = (1 + x) / (1 + Cos(x) ^ 2)
+
+    End Select
+    MsgBox "y = " & y
+End Sub
+```
+
+---
+
+## ex17
+
+```vba
+Sub ex17()
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите значение x от -1.4 до 1.9:")
+    Select Case x
+
+        Case Is < 0
+            y = (1 + 2 * x) / (1 + x ^ 2)
+
+        Case Is < 1
+            y = Sin(x) ^ 2 * Sqr(1 + x)
+
+        Case 1 To 1.9
+            y = Sin(x) ^ 2 * Exp(0.2 * x)
+
+    End Select
+
+    MsgBox "y = " & y
+
+End Sub
+```
+
+---
+
+## ex18
+
+```vba
+Sub ex18()
+    Dim x As Double
+    Dim y As Double
+
+    x = InputBox("Введите значение x от -1.4 до 1.4:")
+
+    Select Case x
+
+        Case Is < 0
+            y = Abs(x) / (1 + x) * Exp(-2 * x)
+
+        Case Is < 1
+            y = Sqr(1 + x)
+
+        Case 1 To 1.4
+            y = (1 + Sin(x)) / (1 + x) + 3 * x
+
+    End Select
+
+    MsgBox "y = " & y
+
 End Sub
 ```
